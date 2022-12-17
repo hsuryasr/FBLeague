@@ -1,0 +1,49 @@
+﻿@model  FBLeague.Models.FBData
+@{
+    ViewBag.Title = "AddUser";
+}
+
+<h2>AddUser</h2>
+
+
+@using (Html.BeginForm("SaveUser", "Home"))
+{<p>
+
+        MatchId: <input type="number" name="MatchId" />
+
+    </p>
+
+    <p>
+
+        TeamName1: <input type="text" name="TeamName1" />
+
+    </p>
+
+    <p>
+
+        TeamName2: <input type="text" name="TeamName2" />
+
+    </p>
+
+    string[] s = { "Win", "Draw" };
+    SelectList list = new SelectList(s);
+    <p>
+        Match Status: @Html.DropDownList("dropdownlist1", list,
+"SELECT")
+
+    </p>
+
+    <p>
+
+        Winning Team: <input type="text" name="Winning Team" />
+
+    </p>
+
+    <input type="submit" value="Save Match Result" />
+    @Html.ActionLink("Edit", "Edit") <span>&nbsp;</span>
+    @Html.ActionLink("Delete", "Delete")
+    <hr />
+}
+
+
+

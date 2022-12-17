@@ -1,0 +1,40 @@
+﻿
+@model  FBLeague.Models.FBData
+@{
+    ViewBag.Title = "Create";
+}
+
+
+
+<h2>Create</h2>
+@using (Html.BeginForm("CreateAccount", "Home"))
+{
+    <p>
+        MatchID: @Html.TextBoxFor(a => a.MatchID)
+    </p>
+
+
+
+    <p>
+        TeamName1: @Html.TextBoxFor(a => a.TeamName1)
+    </p>
+
+
+
+    <p>
+        TeamName2: @Html.TextBoxFor(a => a.TeamName2)
+    </p>
+    <p>
+        Status: @Html.TextBoxFor(a => a.Status)
+    </p>
+    <p>
+        winningTeam: @Html.TextBoxFor(a => a.WinningTeam)
+    </p>
+    <p>
+        Points: @Html.TextBoxFor(a => a.Points)
+    </p>
+
+
+
+    <input type="submit" value="Save Match Result" />
+}
